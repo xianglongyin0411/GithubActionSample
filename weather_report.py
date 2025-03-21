@@ -130,4 +130,4 @@ def weather_report(this_city):
 
 
 if __name__ == '__main__':
-    weather_report("上海浦东新区")
+    weather_report("浦东新区")
