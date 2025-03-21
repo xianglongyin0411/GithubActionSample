@@ -68,14 +68,9 @@ def get_access_token():
     return access_token
 
 
-# def get_daily_love():
-#     # 每日一句情话
-#     url = "https://api.lovelive.tools/api/SweetNothings/Serialization/Json"
-#     r = requests.get(url)
-#     all_dict = json.loads(r.text)
-#     sentence = all_dict['returnObj'][0]
-#     daily_love = sentence
-#     return daily_love
+def get_daily_love():
+    # 每日一句话
+    return "天天向上"
 
 
 def send_weather(access_token, weather):
@@ -107,9 +102,9 @@ def send_weather(access_token, weather):
             },
             "wind_dir": {
                 "value": weather[3]
-            # },
-            # "today_note": {
-            #     "value": get_daily_love()
+            },
+            "today_note": {
+                "value": get_daily_love()
             }
         }
     }
